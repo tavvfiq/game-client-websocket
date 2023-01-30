@@ -65,7 +65,7 @@ type Game struct {
 	state      State
 }
 
-var addr = "0.tcp.ap.ngrok.io:16114"
+var addr = "localhost:8080"
 
 func New(serverID, playerID string) *Game {
 	u := url.URL{Scheme: "ws", Host: addr, Path: "/ws", RawQuery: fmt.Sprintf("serverID=%s&playerID=%s", serverID, playerID)}
